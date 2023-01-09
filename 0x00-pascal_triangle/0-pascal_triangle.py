@@ -8,8 +8,6 @@ def pascal_triangle(n):
     """
     triangle = []
     elem = 0
-    if n <= 0:
-        return triangle
 
     for row in range(n):
         current_row = []
