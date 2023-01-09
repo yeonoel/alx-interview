@@ -1,5 +1,8 @@
-def pascal_triangle(n):
+#!/usr/bin/python3
+""" alx techniical interview. """
 
+def pascal_triangle(n):
+""" returns a list of lists of integers representing the Pascal’s triangle of n."""
     triangle = []
     elem = 0
     if n <= 0:
@@ -17,4 +20,4 @@ def pascal_triangle(n):
 
         triangle.append(current_row)
 
-    return (triangle)
+    return triangle
