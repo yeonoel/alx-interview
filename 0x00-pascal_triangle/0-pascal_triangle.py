@@ -1,8 +1,11 @@
 #!/usr/bin/python3
 """ alx techniical interview. """
 
+
 def pascal_triangle(n):
-""" returns a list of lists of integers representing the Pascal’s triangle of n."""
+    """ returns a list of lists of integers
+        representing the Pascal’s triangle of n.
+    """
     triangle = []
     elem = 0
     if n <= 0:
