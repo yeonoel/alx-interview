@@ -3,6 +3,7 @@
 import sys
 
 def solve_nqueens(n, i, a, b, c, solution=[]):
+    """ solve nqueens. """
     if i == n:
         yield solution
         return
@@ -11,6 +12,7 @@ def solve_nqueens(n, i, a, b, c, solution=[]):
             yield from solve_nqueens(n, i+1, a+[j], b+[i+j], c+[i-j], solution + [[i, j]])
 
 def nqueens(n):
+    """ nqueens. """
     if not isinstance(n, int):
         print("N must be a number")
         sys.exit(1)
