@@ -2,6 +2,10 @@
 
 import sys
 
+if len(sys.argv) != 2:
+    print("Usage: nqueens N")
+    sys.exit(1)
+
 
 def solve_nqueens(n, i, a, b, c, solution=[]):
     """ solve nqueens. """
@@ -26,9 +30,5 @@ def nqueens(n):
         print(solution)
 
 
-if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: nqueens N")
-        sys.exit(1)
-    n = int(sys.argv[1])
-    nqueens(n)
+n = int(sys.argv[1])
+nqueens(n)
