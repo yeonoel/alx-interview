@@ -1,21 +1,19 @@
-#!/usr/bin/python3
-
 def island_perimeter(grid):
-    """ return island perimeter. """
+""" initialize perimeter to """
     perimeter = 0
-    grid_len = len(grid)
-
-    for j in range(grid_len):
-        row_len = len(grid[j])
-        for i in range(row_len):
-            if grid[j][i] == 1:
-                if i == 0 or grid[j][i-1] == 0:
+    
+    for i in range(len(grid)):
+        for j in range(len(grid[0])):
+            if grid[i][j] == 1:  # if the cell contains land
+                # check if the cell is on the perimeter
+                if i == 0 or grid[i-1][j] == 0:  # top edge
                     perimeter += 1
-                if i == row_len - 1 or grid[j][i+1] == 0:
+                if j == 0 or grid[i][j-1] == 0:  # left edge
                     perimeter += 1
-                if j == 0 or grid[j+1][i] == 0:
+                if i == len(grid)-1 or grid[i+1][j] == 0:  # bottom edge
                     perimeter += 1
-                if j == grid_len - 1 or grid[j-1][i] == 0:
+                if j == len(grid[0])-1 or grid[i][j+1] == 0:  # right edge
                     perimeter += 1
-
+    
     return perimeter
+
